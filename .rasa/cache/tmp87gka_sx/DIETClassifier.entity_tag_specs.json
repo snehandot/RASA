@@ -1,0 +1,36 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-city",
+      "2": "I-city",
+      "3": "L-city",
+      "4": "U-city",
+      "5": "B-currency",
+      "6": "I-currency",
+      "7": "L-currency",
+      "8": "U-currency",
+      "9": "B-stock",
+      "10": "I-stock",
+      "11": "L-stock",
+      "12": "U-stock",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-city": 1,
+      "I-city": 2,
+      "L-city": 3,
+      "U-city": 4,
+      "B-currency": 5,
+      "I-currency": 6,
+      "L-currency": 7,
+      "U-currency": 8,
+      "B-stock": 9,
+      "I-stock": 10,
+      "L-stock": 11,
+      "U-stock": 12,
+      "O": 0
+    },
+    "num_tags": 13
+  }
+]

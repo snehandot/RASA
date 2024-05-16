@@ -1,0 +1,58 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: weather time?
+  steps:
+  - intent: weather_time
+  - action: utter_city
+  - intent: city_given
+    entities:
+       - city: "delhi"
+  - action: action_game
+  
+- story: cryp?
+  steps:
+  - intent: bitcoin_time
+  - action: utter_bitcoin
+  - intent: bitcoin_given
+    entities:
+       - currency: "ethereum"
+  - action: action_bitcoin
+  
+- story: stock?
+  steps:
+  - intent: stock_time
+  - action: utter_stock
+  - intent: stock_given
+    entities:
+       - stock: "AMZN"
+  - action: action_stock
+ 
+- story: cal?
+  steps:
+  - intent: cal_time
+  - action: utter_cal
+  - intent: cal_given
+    entities:
+       - stock: "CAL"
+  - action: action_cal
+  

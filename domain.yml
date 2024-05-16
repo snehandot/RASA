@@ -1,0 +1,96 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - weather_time
+  - city_given
+  - bitcoin_time
+  - bitcoin_given
+  - stock_time 
+  - stock_given
+  - cal_time
+  - cal_given
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_city:
+  - text: "Which city are you asking for?"
+  
+  utter_bitcoin:
+  - text: "Could you tell me the name of the crypto"
+  
+  utter_stock:
+  - text: "Which stock , give stock id"
+  
+  utter_cal:
+  - text: "Which eqn u want"
+
+  
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+  
+actions:
+ - action_game
+ - action_bitcoin
+ - action_stock
+ - action_cal
+
+entities:
+  - city
+  - currency
+  - stock
+  - cal
+  
+slots:
+  city:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: city
+        
+  currency:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: currency
+
+  stock:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: stock
+
+  cal:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: cal
+  
+

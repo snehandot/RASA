@@ -1,0 +1,6 @@
+[
+  {
+    "name": "city",
+    "pattern": "(\\bDelhi\\b|\\bdelhi\\b|\\bChennai\\b|\\bchennai\\b|\\bpune\\b)"
+  }
+]
