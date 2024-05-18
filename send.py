@@ -5,7 +5,6 @@ def crypto(currency):
 	message=currency
 	print("hi")
 
-	# Sending the request with the message as a query parameter
 	response = requests.get(url, params={"message": message})
 
 	if response.status_code == 200:
